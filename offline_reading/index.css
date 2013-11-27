@@ -1,0 +1,40 @@
+code > span.kw { color: rgb(0, 112, 32); font-weight: bold; }
+code > span.dt { color: rgb(144, 32, 0); }
+code > span.dv { color: rgb(64, 160, 112); }
+code > span.fl { color: rgb(64, 160, 112); }
+code > span.ch { color: rgb(64, 112, 160); }
+code > span.st { color: rgb(64, 112, 160); }
+code > span.co { color: rgb(96, 160, 176); font-style: italic; }
+code > span.ot { color: rgb(0, 112, 32); }
+code > span.fu { color: rgb(6, 40, 126); }
+code > span.er { color: rgb(255, 0, 0); font-weight: bold; }
+/* ::::: http://addyosmani.github.io/backbone-fundamentals/style.css ::::: */
+
+h1, h2, h3, h4, h5, h6, p, blockquote { margin: 0px; padding: 0px; }
+body { font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB",Arial,sans-serif; font-size: 14px; line-height: 20px; color: rgb(0, 0, 0); margin: 10px 13px; }
+a { color: rgb(0, 105, 214); }
+a:hover { color: rgb(0, 80, 163); text-decoration: none; }
+a img { border: medium none; }
+p { margin-bottom: 20px; }
+h1, h2, h3, h4, h5, h6 { color: rgb(64, 64, 64); line-height: 36px; }
+h1 { margin-bottom: 18px; font-size: 30px; }
+h1 a { margin-top: 100px; display: block; }
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5 { font-size: 14px; }
+h6 { font-size: 13px; }
+hr { margin: 0px 0px 19px; border-width: 0px 0px 1px; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color rgb(204, 204, 204); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+blockquote { padding: 13px 13px 21px 15px; margin-bottom: 18px; font-family: georgia,serif; font-style: italic; }
+blockquote:before { content: "“"; font-size: 40px; margin-left: -10px; font-family: georgia,serif; color: rgb(238, 238, 238); }
+blockquote p { font-size: 14px; font-weight: 300; line-height: 18px; margin-bottom: 0px; font-style: italic; }
+code, pre { font-family: Monaco,Andale Mono,Courier New,monospace; }
+code { background-color: rgb(254, 233, 204); color: rgba(0, 0, 0, 0.75); padding: 1px 3px; font-size: 12px; border-radius: 3px; }
+pre { display: block; padding: 14px; margin: 0px 0px 18px; line-height: 16px; font-size: 11px; border: 1px solid rgb(217, 217, 217); white-space: pre-wrap; word-wrap: break-word; }
+pre code { background-color: rgb(255, 255, 255); color: rgb(115, 115, 115); font-size: 11px; padding: 0px; }
+figure img { max-width: 100%; }
+ul li a { font-weight: bold; }
+ul li ul a { font-weight: normal; }
+@media screen and (min-width: 768px) {
+	body { width: 748px; margin: 40px auto; }
+}
