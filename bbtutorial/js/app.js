@@ -12,8 +12,13 @@ var SearchView = Backbone.View.extend({
   },
 
   render: function() {
+    // Pass variables through to the Underscore template.
+    var variables = {
+      search_label: 'My Search',
+    }
+
     // Compile the template using underscore.
-    var template = _.template($("#search_template").html());
+    var template = _.template($("#search_template").html(), variables);
 
     // Load the compiled HTML back into the template.
     this.$el.html(template);
