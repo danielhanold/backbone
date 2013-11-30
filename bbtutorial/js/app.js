@@ -95,12 +95,25 @@ var Character = Backbone.Model.extend({
     age: 0,
   },
 
+  validate: function(attributes) {
+    console.log('Validation is in process');
+    if (attributes.age < 0 && attributes.name != 'Dr Manhattan') {
+      console.log('Failed validation');
+      return "You can't be negative years old";
+    }
+  },
+
   initialize: function() {
     console.log("Character was initalized");
     this.on('change:name', function(e) {
       console.log(e);
       var name = e.get('name');
       console.log('Changed name to: ' + name);
+    });
+
+    // Validation error.
+    this.on('invalid', function(model, error) {
+      alert(error);
     });
   }
 });
