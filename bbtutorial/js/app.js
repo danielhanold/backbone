@@ -47,6 +47,13 @@ var Person = Backbone.Model.extend({
   },
   initialize: function() {
     console.log('A new person just got created');
+  },
+
+  // Create a public function 'adpot'.
+  adopt: function(newChildsName) {
+    console.log('Will adopt child: ' + newChildsName);
+    newChildsName = newChildsName || '';
+    this.set('child', newChildsName);
   }
 });
 
@@ -73,5 +80,9 @@ var personChild = person.get('child');
 console.log('All Person Attributes: ' + JSON.stringify(personAllAttributes));
 console.log('Person Name: ' + personName);
 console.log('Person\'s Child: ' + personChild);
+
+// Add this person's adopted child.
+person.adopt('John Resig');
+console.log('Person\'s child after adoption: ' + person.get('child'));
 
 
