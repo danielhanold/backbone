@@ -86,3 +86,24 @@ person.adopt('John Resig');
 console.log('Person\'s child after adoption: ' + person.get('child'));
 
 
+/**
+* Create a "character" model.
+*/
+var Character = Backbone.Model.extend({
+  defaults: {
+    name: 'Fetus',
+    age: 0,
+  },
+
+  initialize: function() {
+    console.log("Character was initalized");
+    this.on('change:name', function(e) {
+      console.log(e);
+      var name = e.get('name');
+      console.log('Changed name to: ' + name);
+    });
+  }
+});
+
+var thomas = new Character();
+thomas.set('name', 'Stewie Griffin');
