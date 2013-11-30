@@ -120,3 +120,31 @@ var Character = Backbone.Model.extend({
 
 var thomas = new Character();
 thomas.set('name', 'Stewie Griffin');
+
+
+/**
+* Define a collection.
+*/
+var Song = Backbone.Model.extend({
+  defaults: {
+    name: 'Not specificed',
+    artis: 'Not specified',
+  },
+  initialize: function() {
+    console.log('Initialized a Song model');
+  }
+});
+
+var Album = Backbone.Collection.extend({
+  model: Song
+});
+
+// Create a few songs.
+var songs = []
+songs.push(new Song({name: 'How Bizzare', artist: 'OMC'}));
+songs.push(new Song({name: 'Sexual Healing', artist: 'Marvin Gaye'}));
+songs.push(new Song({name: 'Talk it over', artist: 'OMC'}));
+var myAlbum = new Album(songs);
+console.log(myAlbum);
+console.log(myAlbum.models);
+
