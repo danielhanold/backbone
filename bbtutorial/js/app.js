@@ -39,6 +39,12 @@ var SearchView = Backbone.View.extend({
 * Define a "Person" model.
 */
 var Person = Backbone.Model.extend({
+  // Set a few defaults if none are passed.
+  defaults: {
+    name: 'Fetus',
+    age: 0,
+    child: '',
+  },
   initialize: function() {
     console.log('A new person just got created');
   }
