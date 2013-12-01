@@ -148,3 +148,22 @@ var myAlbum = new Album(songs);
 console.log(myAlbum);
 console.log(myAlbum.models);
 
+/**
+* Define a router.
+*/
+var AppRouter = Backbone.Router.extend({
+  routes: {
+    // Matches www.example.com/#anything-here
+    '*actions': 'defaultRoute'
+  },
+
+  defaultRoute: function(actions) {
+    console.log(actions);
+  }
+});
+
+// Initiate the router.
+var appRouter = new AppRouter();
+// Start the history.
+Backbone.history.start();
+
