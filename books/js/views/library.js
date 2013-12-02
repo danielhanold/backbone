@@ -10,8 +10,32 @@ app.LibraryView = Backbone.View.extend({
   el: '#books',
 
   initialize: function(initialBooks) {
+    // Render initial books.
     this.collection = new app.Library(initialBooks);
     this.render();
+
+    // When a new book gets added to the library, add it.
+    this.listenTo(this.collection, 'add', this.renderBook);
+  },
+
+
+  events: {
+    'click button#add': 'addBook'
+  },
+
+  // Add a book.
+  addBook: function(e) {
+    e.preventDefault();
+    var formData = {};
+
+    $('#addBook div').children('input').each(function(index, el) {
+      var value = $(el).val();
+      if (value != '') {
+        formData[el.id] = value;
+      }
+    });
+
+    this.collection.add(new app.Book(formData));
   },
 
   // Render library by rendering each book in its collection.

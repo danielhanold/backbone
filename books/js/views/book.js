@@ -13,7 +13,7 @@ app.BookView = Backbone.View.extend({
 
   render: function() {
     // this.el is what we defined in tagname. Use $el to get access
-    // to jQuery html functino.
+    // to jQuery html function.
     this.$el.html(this.template(this.model.toJSON()));
 
     return this;
