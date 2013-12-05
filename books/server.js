@@ -33,6 +33,12 @@ app.configure(function() {
   }));
 });
 
+// Define routes.
+app.get('/api', function(request, response) {
+  response.send('Library API is running');
+});
+
+
 // Start server.
 var port = 4711;
 app.listen(port, function() {
