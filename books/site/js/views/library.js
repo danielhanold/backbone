@@ -9,13 +9,18 @@ var app = app || {};
 app.LibraryView = Backbone.View.extend({
   el: '#books',
 
-  initialize: function(initialBooks) {
+  initialize: function() {
     // Render initial books.
-    this.collection = new app.Library(initialBooks);
+    this.collection = new app.Library();
+    this.collection.fetch({reset: true});
     this.render();
 
     // When a new book gets added to the library, add it.
     this.listenTo(this.collection, 'add', this.renderBook);
+
+    // When the collection gets reset, render the library view.
+    // Requires since collection.fetch loads data asynchronously.
+    this.listenTo(this.collection, 'reset', this.render);
   },
 
 
