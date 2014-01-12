@@ -10,8 +10,8 @@ app.Book = Backbone.Model.extend({
     coverImage: 'img/placeholder.png',
     title: 'No title',
     author: 'Unknown',
-    releaseDate: 'Unknown',
-    keywords: 'None',
+    releaseDate: new Date().getTime(),
+    keywords: [],
   },
 
   // Parse function required when new models are
