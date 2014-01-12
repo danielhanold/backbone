@@ -14,7 +14,11 @@
       <li><%= title %></li>
       <li><%= author %></li>
       <li><%= moment(releaseDate).format('MMMM YYYY') %></li>
-      <li><%= keywords %></li>
+      <li>
+        <% _.each(keywords, function(obj) { %>
+          <%= obj.keyword + ', ' %>
+          <% }); %>
+      </li>
     </ul>
 
     <button class="delete">Delete</button>
